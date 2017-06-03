@@ -10,3 +10,6 @@ awk '!a[$0]++' all.assoc.linear > all_rmdup.assoc.linear
 # sort IGV requires file to be sorted on chr and bp. remove superfluous headers. This can be changed for adjusted file p-values
 # are in col 9 
 sort -k1 -k3 -g all_rmdup.assoc.linear | sed '1,21d' > pop_merged.assoc.linear
+
+# Compare significant snps in adjusted and unadjusted assoc file and print overlap
+awk 'NR==FNR{arr[$0];next} ($0 in arr)' linear_sigsnp.txt _dj_signp.txt > out.file
