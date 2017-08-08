@@ -1,0 +1,74 @@
+\documentclass[a4paper, 12pt]{report}
+\oddsidemargin 0.5in \textwidth 5.75in \textheight 8.25in
+\renewcommand{\baselinestretch}{1}
+\usepackage{floatpag}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{notoccite}
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage[compatible]{algpseudocode}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=black,
+}
+\urlstyle{same}
+\usepackage[nameinlink,capitalise]{cleveref}
+\usepackage[font=small,labelfont=bf]{caption}
+%\title{Inferring the somatic mutation rate from population sequencing data}
+%\author{Declan Bennett}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\topmargin}{-0.6in}
+
+\begin{figure}[!h]
+  \centering
+\includegraphics[width=6cm]{logo.png}
+\end{figure}
+\vspace{1cm}
+
+\begin{center}
+{\LARGE \bigskip\textbf{Inferring the somatic mutation rate from population sequencing data}}
+
+\vspace{1.25cm}
+{\normalsize A thesis submitted \vspace{.5cm}\\ by \vspace{.5cm}\\
+\vspace{1.25cm} Declan Bennett \vspace{1.25cm} \\ to \vspace{.5cm} \\
+The Discipline of Bioinformatics, \\ School of Mathematics, Statistics \& Applied Mathematics \\ National University \textit{of} Ireland, Galway \vspace{1cm} \\ in partial fulfilment of
+the requirements for the degree of \\ \vspace{.5cm} M.Sc. in
+Biomedical Genomics \vspace{1cm} \\ July 31st 2017 \\
+\vspace{1.25cm} Thesis Supervisor: Prof. Cathal Seoighe}
+
+\end{center}
+\end{titlepage}
+%\maketitle
+\include{declaration}
+\include{acknowledgements}
+\include{abstract}
+\pagenumbering{roman} \setcounter{page}{2}
+\tableofcontents
+\newpage
+\listoffigures
+\listoftables
+
+\include{introduction}
+% Uncomment the following lines to include additional Chapters
+\include{Aims}
+\include{Methods}
+\include{results}
+\include{discussion}
+\include{conclusion}
+%Included for Gather Purpose only:
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{ieeetr}
+\bibliography{Thesis_bib}
+\include{appendix}
+
+\end{document}
