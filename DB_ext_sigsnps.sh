@@ -1,3 +1,4 @@
+#Only required when working with individual chromosomes
 #!/bin/sh
 #  job name after -N
 #$ -N DB_ext_sigsnps
