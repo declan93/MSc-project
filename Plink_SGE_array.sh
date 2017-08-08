@@ -1,4 +1,4 @@
-# SGE array for individual chromosome analysis
+# SGE array for individual chromosome analysis. For genotype data which did not need to be merged a standard non array was used with same parameters 
 #!/bin/sh
 
 # Your job name
